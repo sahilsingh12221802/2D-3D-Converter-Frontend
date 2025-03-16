@@ -12,7 +12,7 @@ function App() {
       formData.append('file', file);
   
       try {
-        const response = await fetch('https://blueprintconveterbackend-f2c22e6fe2a3.herokuapp.com/api/files/upload', {
+        const response = await fetch('https://twod-3d-converter-backend.onrender.com/api/files/upload', {
           method: 'POST',
           body: formData,
         });
@@ -21,7 +21,7 @@ function App() {
         }
         const data = await response.json();
         // Prepend the backend URL to the file path
-        const imageUrl = `http://localhost:5003${data.filePath}`;
+        const imageUrl = `https://twod-3d-converter-backend.onrender.com${data.filePath}`;
         setImage(imageUrl);
       } catch (err) {
         console.error('Error uploading file:', err);
