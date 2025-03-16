@@ -12,7 +12,7 @@ function App() {
       formData.append('file', file);
   
       try {
-        const response = await fetch('https://blueprintconveterbackend.herokuapp.com/api/files/upload', {
+        const response = await fetch('https://blueprintconveterbackend-f2c22e6fe2a3.herokuapp.com/api/files/upload', {
           method: 'POST',
           body: formData,
         });
